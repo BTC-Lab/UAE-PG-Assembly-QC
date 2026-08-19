@@ -13,7 +13,7 @@ The QC workflow included:
 
 ---
 
-## 1. Consensus Quality Value (QV) — yak
+## 1. Yak QV
 
 Consensus sequence accuracy was assessed independently for each haplotype using `yak qv`.
 
@@ -41,7 +41,7 @@ yak qv \
 ```
 
 
-## 2. Trio-based phasing assessment — yak trioeval
+## 2. Yak trioeval
 
 For trio samples, haplotype phasing was additionally evaluated using `yak trioeval`.
 
@@ -58,7 +58,7 @@ yak trioeval \
 
 ---
 
-## 3. Assembly statistics — QUAST
+## 3. QUAST
 
 General assembly statistics were calculated using QUAST.
 
@@ -201,7 +201,7 @@ The analysis was performed independently for both haplotypes.
 
 ---
 
-## 6. Read-supported assembly evaluation — Inspector
+## 6. Inspector
 
 Assembly quality was further evaluated using **Inspector**
 
@@ -232,16 +232,4 @@ inspector.py \
 ```
 
 
-## QC Workflow Summary
-
-| QC analysis | Tool | Applied to | Purpose |
-|---|---|---|---|
-| Consensus accuracy | `yak qv` | All haplotypes | Estimate assembly QV using k-mer concordance |
-| Trio phasing | `yak trioeval` | Trio samples only | Assess parental haplotype assignment |
-| Assembly statistics | QUAST | All haplotypes | Evaluate general assembly and reference-based statistics |
-| Gene completeness and duplication | `minimap2` + `paftools.js asmgene` | All haplotypes | Assess gene representation and duplication |
-| Interchromosomal misjoins | `minigraph` + `paftools.js misjoin` | All haplotypes | Identify potential structural assembly misjoins |
-| Read-supported assembly QC | Inspector | All haplotypes | Assess assembly errors using HiFi reads |
-
----
 
