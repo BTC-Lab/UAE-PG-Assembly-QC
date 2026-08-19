@@ -40,11 +40,6 @@ yak qv \
     > /ERGP/Pangenome/Assembly/quality_checks_after/yak_qv/GDXX1.hap1.yak.qv.txt
 ```
 
-Logs were written to:
-
-```text
-/ERGP/Pangenome/Assembly/quality_checks_after/logs/yak.qv.logs
-```
 
 ## 2. Trio-based phasing assessment — yak trioeval
 
